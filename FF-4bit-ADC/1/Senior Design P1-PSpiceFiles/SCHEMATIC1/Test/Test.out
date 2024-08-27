@@ -1,0 +1,433 @@
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Karson Younger\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SENIOR DESIGN P1
+R_R5         OUT5 N19191  1k TC=0,0 
+E_U11         OUT5 0 VALUE {LIMIT(V(N18987,N19191)*1E6,-15V,+15V)}
+R_R4         GND N18987  8k TC=0,0 
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND N18915 IO_STM IO_LEVEL=0 
++ 0 0
++ +.5uS 1
++REPEAT FOREVER
++ +.5uS 0
++  +.5uS 1
++ ENDREPEAT
+X_U2         N18851 N18915 N18683 GND N18859 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+X_U6         N19335 GND GND N18851 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+X_U9         N19335 N19563 GND N18891 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+X_U4         N18879 N18915 N18683 GND N18891 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+X_U10         GND GND GND N18907 N19563 GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+R_R2         GND N18987  2k TC=0,0 
+X_U8         N19335 GND GND N18879 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+V_V2         N19629 GND 15V
+X_U3         N18859 N18915 N18683 GND N18879 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+R_R7         N19335 N19837  50 TC=0,0 
+V_V1         N19781 GND 7.4V
+X_U5         N18891 N18915 N18683 GND N18907 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+X_U7         N19335 GND GND N18859 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+V_V3         N18683 GND DC 5Vdc AC 5Vac 
+R_R3         GND N18987  4k TC=0,0 
+R_R8         GND N19335  15k TC=0,0 
+R_R1         GND N18987  1k TC=0,0 
+X_U1         GND N18915 GND N18683 N18851 GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+R_R6         N19191 GND  320 TC=0,0 
+X_U12A         N19781 OUT5 N19629 GND N19837 AD648C
+
+**** RESUMING Test.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node N18915
+*
+* Moving U_DSTM1:OUT1 from analog node N18915 to new digital node N18915$DtoA
+X$N18915_DtoA1
++ N18915$DtoA
++ N18915
++ $G_DPWR
++ $G_DGND
++ DtoA_STM
++       PARAMS: DRVH=   0      DRVL=   0      CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$DIGIFPWR 0 DIGIFPWR
+
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U12A.dx       X_U12A.dy       
+          IS  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U12A.jx       
+               NJF             
+         VTO   -1            
+        BETA  548.300000E-06 
+          IS    1.500000E-12 
+
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DINSTM          
+      S0NAME 0               
+       S0TSW  500.000000E-12 
+       S0RLO     .5          
+       S0RHI    1.000000E+03 
+      S1NAME 1               
+       S1TSW  500.000000E-12 
+       S1RLO    1.000000E+03 
+       S1RHI     .5          
+      S2NAME X               
+       S2TSW  500.000000E-12 
+       S2RLO     .429        
+       S2RHI    1.16         
+      S3NAME R               
+       S3TSW  500.000000E-12 
+       S3RLO     .429        
+       S3RHI    1.16         
+      S4NAME F               
+       S4TSW  500.000000E-12 
+       S4RLO     .429        
+       S4RHI    1.16         
+      S5NAME Z               
+       S5TSW  500.000000E-12 
+       S5RLO    1.000000E+06 
+       S5RHI    1.000000E+06 
+
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          
+        DRVL    0            
+        DRVH    0            
+       DtoA1 DtoA_STM        
+       DtoA2 DtoA_STM        
+       DtoA3 DtoA_STM        
+       DtoA4 DtoA_STM        
+       TPWRT  100.000000E+03 
+
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  GND)    2.4286  ( OUT5)    2.4286  (N18683)    7.4286 (N18851)     .2667     
+
+(N18859)     .2667 (N18879)     .2667 (N18891)     .2667 (N18907)     .2667     
+
+(N18915)     .0025 (N18987)    2.4286 (N19191)    2.4286 (N19335)   16.1730     
+
+(N19563)     .2667 (N19629)   17.4290 (N19781)    9.8286 (N19837)   16.2190     
+
+($G_DGND)    0.0000                   ($G_DPWR)    5.0000                       
+
+(X_U1.D1)    3.5000                   (X_U1.Q1)     .2667                       
+
+(X_U2.D1)    3.5000                   (X_U2.Q1)     .2667                       
+
+(X_U3.D1)    3.5000                   (X_U3.Q1)     .2667                       
+
+(X_U4.D1)    3.5000                   (X_U4.Q1)     .2667                       
+
+(X_U5.D1)    3.5000                   (X_U5.Q1)     .2667                       
+
+(X_U6.D1)    3.5000                   (X_U6.Q1)     .2667                       
+
+(X_U7.D1)    3.5000                   (X_U7.Q1)     .2667                       
+
+(X_U8.D1)    3.5000                   (X_U8.Q1)     .2667                       
+
+(X_U9.D1)    3.5000                   (X_U9.Q1)     .2667                       
+
+(X_U1.DIN)     .4000                  (X_U10.D1)    3.5000                      
+
+(X_U10.Q1)     .2667                  (X_U12A.6)   -4.5138                      
+
+(X_U12A.7)   16.2190                  (X_U12A.8)   16.2190                      
+
+(X_U12A.9)    0.0000                  (X_U2.DIN)     .4000                      
+
+(X_U3.DIN)     .4000                  (X_U4.DIN)     .4000                      
+
+(X_U5.DIN)     .4000                  (X_U6.DIN)     .4000                      
+
+(X_U7.DIN)     .4000                  (X_U8.DIN)     .4000                      
+
+(X_U9.DIN)     .4000                  (X_U1.CLK1)    3.5000                     
+
+(X_U1.X1.5)     .4000                 (X_U1.X1.6)    3.5000                     
+
+(X_U1.X2.6)    3.5000                 (X_U1.X2.7)     .4000                     
+
+(X_U1.X2.8)     .4000                 (X_U1.X2.9)    3.5000                     
+
+(X_U1.X3.6)    3.5000                 (X_U1.X3.7)    3.5000                     
+
+(X_U1.X3.8)     .4000                 (X_U1.X3.9)    3.5000                     
+
+(X_U10.DIN)     .4000                 (X_U12A.10)   10.5420                     
+
+(X_U12A.11)   17.4290                 (X_U12A.12)   17.1410                     
+
+(X_U12A.53)   15.4290                 (X_U12A.54)    4.4286                     
+
+(X_U12A.90)   15.6400                 (X_U12A.91)   15.0000                     
+
+(X_U12A.92)  -15.0000                 (X_U12A.99)    9.9286                     
+
+(X_U2.CLK1)    3.5000                 (X_U2.X1.5)     .4000                     
+
+(X_U2.X1.6)    3.5000                 (X_U2.X2.6)    3.5000                     
+
+(X_U2.X2.7)     .4000                 (X_U2.X2.8)     .4000                     
+
+(X_U2.X2.9)    3.5000                 (X_U2.X3.6)    3.5000                     
+
+(X_U2.X3.7)    3.5000                 (X_U2.X3.8)     .4000                     
+
+(X_U2.X3.9)    3.5000                 (X_U3.CLK1)    3.5000                     
+
+(X_U3.X1.5)     .4000                 (X_U3.X1.6)    3.5000                     
+
+(X_U3.X2.6)    3.5000                 (X_U3.X2.7)     .4000                     
+
+(X_U3.X2.8)     .4000                 (X_U3.X2.9)    3.5000                     
+
+(X_U3.X3.6)    3.5000                 (X_U3.X3.7)    3.5000                     
+
+(X_U3.X3.8)     .4000                 (X_U3.X3.9)    3.5000                     
+
+(X_U4.CLK1)    3.5000                 (X_U4.X1.5)     .4000                     
+
+(X_U4.X1.6)    3.5000                 (X_U4.X2.6)    3.5000                     
+
+(X_U4.X2.7)     .4000                 (X_U4.X2.8)     .4000                     
+
+(X_U4.X2.9)    3.5000                 (X_U4.X3.6)    3.5000                     
+
+(X_U4.X3.7)    3.5000                 (X_U4.X3.8)     .4000                     
+
+(X_U4.X3.9)    3.5000                 (X_U5.CLK1)    3.5000                     
+
+(X_U5.X1.5)     .4000                 (X_U5.X1.6)    3.5000                     
+
+(X_U5.X2.6)    3.5000                 (X_U5.X2.7)     .4000                     
+
+(X_U5.X2.8)     .4000                 (X_U5.X2.9)    3.5000                     
+
+(X_U5.X3.6)    3.5000                 (X_U5.X3.7)    3.5000                     
+
+(X_U5.X3.8)     .4000                 (X_U5.X3.9)    3.5000                     
+
+(X_U6.CLK1)     .4000                 (X_U6.X1.5)     .4000                     
+
+(X_U6.X1.6)    3.5000                 (X_U6.X2.6)    3.5000                     
+
+(X_U6.X2.7)    3.5000                 (X_U6.X2.8)     .4000                     
+
+(X_U6.X2.9)    3.5000                 (X_U6.X3.6)    3.5000                     
+
+(X_U6.X3.7)     .4000                 (X_U6.X3.8)     .4000                     
+
+(X_U6.X3.9)    3.5000                 (X_U7.CLK1)     .4000                     
+
+(X_U7.X1.5)     .4000                 (X_U7.X1.6)    3.5000                     
+
+(X_U7.X2.6)    3.5000                 (X_U7.X2.7)    3.5000                     
+
+(X_U7.X2.8)     .4000                 (X_U7.X2.9)    3.5000                     
+
+(X_U7.X3.6)    3.5000                 (X_U7.X3.7)     .4000                     
+
+(X_U7.X3.8)     .4000                 (X_U7.X3.9)    3.5000                     
+
+(X_U8.CLK1)     .4000                 (X_U8.X1.5)     .4000                     
+
+(X_U8.X1.6)    3.5000                 (X_U8.X2.6)    3.5000                     
+
+(X_U8.X2.7)    3.5000                 (X_U8.X2.8)     .4000                     
+
+(X_U8.X2.9)    3.5000                 (X_U8.X3.6)    3.5000                     
+
+(X_U8.X3.7)     .4000                 (X_U8.X3.8)     .4000                     
+
+(X_U8.X3.9)    3.5000                 (X_U9.CLK1)    3.5000                     
+
+(X_U9.X1.5)     .4000                 (X_U9.X1.6)    3.5000                     
+
+(X_U9.X2.6)    3.5000                 (X_U9.X2.7)     .4000                     
+
+(X_U9.X2.8)     .4000                 (X_U9.X2.9)    3.5000                     
+
+(X_U9.X3.6)    3.5000                 (X_U9.X3.7)    3.5000                     
+
+(X_U9.X3.8)     .4000                 (X_U9.X3.9)     .4000                     
+
+(X_U1.Q1BAR)    3.5000                (X_U10.CLK1)     .4000                    
+
+(X_U10.X1.5)     .4000                (X_U10.X1.6)    3.5000                    
+
+(X_U10.X2.6)    3.5000                (X_U10.X2.7)    3.5000                    
+
+(X_U10.X2.8)     .4000                (X_U10.X2.9)    3.5000                    
+
+(X_U10.X3.6)    3.5000                (X_U10.X3.7)     .4000                    
+
+(X_U10.X3.8)     .4000                (X_U10.X3.9)    3.5000                    
+
+(X_U2.Q1BAR)    3.5000                (X_U3.Q1BAR)    3.5000                    
+
+(X_U4.Q1BAR)    3.5000                (X_U5.Q1BAR)    3.5000                    
+
+(X_U6.Q1BAR)    3.5000                (X_U7.Q1BAR)    3.5000                    
+
+(X_U8.Q1BAR)    3.5000                (X_U9.Q1BAR)    3.5000                    
+
+(X_U10.Q1BAR)    3.5000               
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(N18915$DtoA) : 0  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         1.459E-02
+    V_V1         1.103E-11
+    V_V3         0.000E+00
+    X_U12A.vb   -4.514E-05
+    X_U12A.vc   -1.472E-02
+    X_U12A.ve    1.118E-11
+    X_U12A.vlim   1.564E-02
+    X_U12A.vlp   4.420E-05
+    X_U12A.vln  -3.064E-11
+    X$DIGIFPWR.VDPWR  -5.003E-03
+    X$DIGIFPWR.VDGND  -5.000E-06
+
+    TOTAL POWER DISSIPATION  -1.65E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/27/24 16:06:51 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

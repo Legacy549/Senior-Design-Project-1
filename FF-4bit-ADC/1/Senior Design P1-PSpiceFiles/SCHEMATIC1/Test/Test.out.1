@@ -1,0 +1,99 @@
+
+**** 08/27/24 16:00:31 ***** PSpice 23.1.0 (18 July 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Test"  [ C:\Users\Karson Younger\Documents\GitHub\Senior-Design-Project-1\FF-4bit-ADC\1\Senior Design P1-PSp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Karson Younger\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SENIOR DESIGN P1
+R_R5         N19163 N19191  1k TC=0,0 
+E_U11         N19163 0 VALUE {LIMIT(V(N18987,N19191)*1E6,-15V,+15V)}
+R_R4         GND N18987  8k TC=0,0 
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND N18915 IO_STM IO_LEVEL=0 
++ 0 0
++ +.5uS 1
++REPEAT FOREVER
++ +.5uS 0
++  +.5uS 1
++ ENDREPEAT
+X_U2         N18851 N18915 N18683 GND N18859 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+X_U6         N19335 GND GND N18851 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+X_U9         N19335 N19563 GND N18891 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+X_U4         N18879 N18915 N18683 GND N18891 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+X_U10         GND GND GND N18907 N19563 GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+R_R2         GND N18987  2k TC=0,0 
+X_U8         N19335 GND GND N18879 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+V_V2         N19629 GND 15V
+X_U3         N18859 N18915 N18683 GND N18879 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+R_R7         N19335 N19837  50 TC=0,0 
+V_V1         N19781 GND 7.4V
+X_U5         N18891 N18915 N18683 GND N18907 GND DFFRS_ABM PARAMS: VIH=0.8
++  VOH=3.5 VOL=0.4
+X_U7         N19335 GND GND N18859 GND GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+V_V3         N18683 GND DC 5Vdc AC 0Vac 
+R_R3         GND N18987  4k TC=0,0 
+R_R8         GND N19335  15k TC=0,0 
+R_R1         GND N18987  1k TC=0,0 
+X_U1         GND N18915 GND N18683 N18851 GND DFFRS_ABM PARAMS: VIH=0.8 VOH=3.5
++  VOL=0.4
+R_R6         N19191 GND  320 TC=0,0 
+X_U12A         N19781 N19743 N19629 GND N19837 AD648C
+
+**** RESUMING Test.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node N18915
+*
+* Moving U_DSTM1:OUT1 from analog node N18915 to new digital node N18915$DtoA
+X$N18915_DtoA1
++ N18915$DtoA
++ N18915
++ $G_DPWR
++ $G_DGND
++ DtoA_STM
++       PARAMS: DRVH=   0      DRVL=   0      CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$DIGIFPWR 0 DIGIFPWR
+
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N19743.
+
